@@ -55,7 +55,7 @@ body {
 .resume-download .btn {
     --b: 3px;
     --s: .45em;
-    --color: var(--text-color-primary);
+    --color: var(--blue9);
 
     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
     color: var(--color);

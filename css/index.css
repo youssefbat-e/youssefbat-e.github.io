@@ -42,19 +42,27 @@ body {
     text-align: center;
 }
 
-.home-content h1 {
+.home-content h1 span{
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    background-image: linear-gradient(to right, var(--blue6), var(--blue9));
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.home-content p {
-    font-size: 1.2rem;
+.home-content h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
     margin-bottom: 2rem;
+    background-image: linear-gradient(to right, var(--blue8), var(--blue9));
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .home-content .btn {
-    padding: 1rem 2.5rem;
+    margin-top: 12px;
+    padding: 20rem 2.5rem;
     font-size: 1.8rem;
 }
 
@@ -79,15 +87,16 @@ body {
 .home-content .btn {
     position: relative;
     overflow: hidden;
-    border: 1px solid #18181a;
-    color: #18181a;
+    border: 1px solid #20142CFF;
+    color: var(--text-color-secondary);
     display: inline-block;
     font-size: 15px;
+    font-weight: bold;
     line-height: 15px;
     padding: 18px 18px 17px;
     text-decoration: none;
     cursor: pointer;
-    background: #fff;
+    background: var(--blue9);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
@@ -100,8 +109,7 @@ body {
 }
 
 .home-content .btn span:last-child {
-    color: white;
-    display: block;
+    color: var(--text-color-secondary);
     position: absolute;
     bottom: 0;
     transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
@@ -121,9 +129,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--blue9);
     transform-origin: bottom center;
-    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transition: transform .6s cubic-bezier(0.48, 0, 0.12, 1);
     transform: skewY(9.3deg) scaleY(0);
     z-index: 50;
 }
