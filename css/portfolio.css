@@ -96,7 +96,7 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute; /* Updated */
-    bottom: -100px; /* Adjust the position as needed */
+    bottom: -120px; /* Adjust the position as needed */
     left: 0;
     width: 95%;
 }
