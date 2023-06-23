@@ -1,0 +1,172 @@
+@import "color_var.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, var(--blue3), var(--text-color-secondary));
+    animation: backgroundAnimation 15s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 60%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.portfolio-timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    height: 300px; /* Set the desired height of the timeline */
+}
+
+.portfolio-timeline::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.timeline-node {
+    flex: 0 0 auto;
+    width: 120px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px; /* Adjust the spacing between the nodes */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; /* Added */
+}
+
+.timeline-node:last-child {
+    margin-right: 0;
+}
+
+.timeline-node:hover {
+    transform: scale(1.1);
+}
+
+.timeline-node.active {
+    width: 360px; /* Adjust the expanded width as needed */
+    margin-right: 10px; /* Adjust the expanded node spacing */
+}
+
+.timeline-node.active .node-number {
+    width: 72px; /* Adjust the expanded node number size */
+    height: 72px;
+}
+
+.timeline-node.active .node-title {
+    color: #fff; /* Adjust the expanded node title color */
+}
+
+.timeline-node.active .node-content {
+    display: none;
+}
+
+.timeline-node.active .card-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Updated */
+    bottom: -100px; /* Adjust the position as needed */
+    left: 0;
+    width: 95%;
+}
+
+.node-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.node-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color-primary);
+    background-color: var(--blue3);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.node-title {
+    font-size: 14px;
+    color: var(--text-color-secondary);
+    text-align: center;
+}
+
+.card-layout {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.3s ease;
+}
+
+.card-layout.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    color: var(--text-color-primary);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-description {
+    color: var(--text-color-primary);
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card-button {
+    display: inline-block;
+    color: #fff;
+    background-color: var(--blue3);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: var(--blue2);
+}
