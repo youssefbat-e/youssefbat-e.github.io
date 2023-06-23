@@ -15,7 +15,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: linear-gradient(to bottom, var(--my-red-bright), var(--my-dark-purple));
+    background-image: linear-gradient(to bottom, var(--blue3), var(--text-color-secondary));
     animation: backgroundAnimation 15s ease infinite;
 }
 
@@ -31,42 +31,110 @@ body {
     }
 }
 
-.code-snippet {
-    width: 90%;
-    max-width: 2000px;
-    margin: 12px auto;
-    font-size: 16px;
-    line-height: 1.5;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: var(--text-color-primary);
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.home-content .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 576px) {
+    .home-content h1 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.8rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .home-content .btn {
+        font-size: 1.8rem;
+        padding: 1rem 2.5rem;
+    }
+}
+
+
+.home-content .btn {
     position: relative;
-}
-
-.code-snippet pre {
-    transition: transform 0.3s ease;
-}
-
-pre div:hover {
-    background-color: rgba(0,0,0,0.2);
-}
-
-.code-line {
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    border: 1px solid #18181a;
+    color: #18181a;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 18px 18px 17px;
+    text-decoration: none;
     cursor: pointer;
-}
-.code-line:hover {
-    transform: scale(0.98);
-    background-color: var(--my-dark-purple);
-    font-size: 20px;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
 
-@media (max-width: 768px) {
-    body {
-        overflow: auto;
-    }
-    .code-snippet {
-        width: 90%;
-        margin: 50px auto;
-        padding: 10px;
-    }
+.home-content .btn span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+}
+
+.home-content .btn span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+}
+
+.home-content .btn:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.home-content .btn:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+}
+
+.home-content .btn:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
 }

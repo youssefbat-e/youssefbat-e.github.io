@@ -1,0 +1,72 @@
+@import url("bootstrap.min.css");
+@import "color_var.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, var(--blue3), var(--text-color-secondary));
+    animation: backgroundAnimation 15s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 60%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.code-snippet {
+    width: 90%;
+    max-width: 2000px;
+    margin: 12px auto;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    position: relative;
+}
+
+.code-snippet pre {
+    transition: transform 0.3s ease;
+}
+
+pre div:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.code-line {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.code-line:hover {
+    transform: scale(0.98);
+    background-color: var(--text-color-secondary);
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+    .code-snippet {
+        width: 90%;
+        margin: 50px auto;
+        padding: 10px;
+    }
+}

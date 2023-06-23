@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/custom-cursor.css">
-    <link rel="stylesheet" href="css/prism.css">
-    <script src="js/prism.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         fetch('header.html')
             .then(response => response.text())
@@ -20,51 +18,29 @@
             });
     </script>
 </head>
+
 <body>
     <div class="background-animation"></div>
-    <div class="code-snippet">
-    <pre><code class="language-javascript">
-class YoussefBat {
-        // Learning throughout the journey
-    constructor() {
-        this.name = 'Youssef Bat';
-        this.dayOfBirthTimestamp = 1035040069;
-        this.email = 'youssef.bat20@gmail.com';
-    }
 
-    workExperience() {
-        return [];
-    }
-    education() {
-        return [
-            { '2020-2024': 'La salle Ramon Llull university, Spain, Barcelona - Bachelor of Computer Engineering, International Computer Engineering (ICE)' }
-        ];
-    }
-    skills() {
-        return [
-            'HTML/CSS/JS', 'Vue', 'Slim', 'Bootstrap', 'Vite', 'npm', 'Docker', 'GIT', 'Twig', 'PHP',
-            'MySQL/SqlLite/Neo4j', 'Photoshop', 'Illustrator', 'Figma', 'Java', 'Python', 'C', 'C++'
-        ];
-    }
-}
-</code></pre>
+    <div class="home-content">
+        <h1>Hi, My name is <span class="auto-type1"></span></h1>
+        <h2><span class="auto-type2"></span></h2>
+        <button href="about.html" class="btn" role="button"><span class="text">Learn More</span><span>About Me</span></button>
     </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            Prism.highlightAll();
+        var typed = new Typed('.auto-type1', {
+            strings: ['<b><i>Youssef Bat</i></b>.'],
+            typeSpeed: 10
         });
-    </script>
-    <script>
-        $(document).ready(function() {
-            var txt = $('pre').html().split("\n");
-            var output = "";
-            for (var x = 0; x < txt.length - 1; x++) {
-                var tabulation = "&nbsp;&nbsp;&nbsp;&nbsp;"; // You can adjust the number of spaces here
-                var indentedLine = tabulation + txt[x];
-                output += "<div class='code-line'>" + indentedLine + "</div>";
-            }
-            $('pre').html(output);
+
+        var typed1 = new Typed('.auto-type2', {
+            strings: ['I\'m a Computer engineering student', 'And a software engineer to be'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
         });
     </script>
 </body>
+
 </html>
