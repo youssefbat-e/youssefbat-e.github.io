@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/custom-cursor.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('afterbegin', html);
+            });
+    </script>
 </head>
 <body>
-
+<div class="background-animation"></div>
+<div class="resume-download" id="resume-download">
+    <h2>Ready to Discover My Full Potential?</h2>
+    <p>Download my professional resume in PDF format and explore my qualifications, experience, and achievements.</p>
+    <a href="pdf/Youssef_CV.pdf" download class="btn btn-primary">Download Resume</a>
+</div>
 </body>
 </html>

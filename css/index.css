@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevent horizontal scrolling */
+    overflow: hidden;
     position: relative;
 }
 
@@ -16,18 +16,18 @@ body {
     height: 100%;
     z-index: -1;
     background-image: linear-gradient(to bottom, var(--my-red-bright), var(--my-dark-purple));
-    animation: backgroundAnimation 20s infinite;
+    animation: backgroundAnimation 15s ease infinite;
 }
 
 @keyframes backgroundAnimation {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 100% 60%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
 
@@ -62,7 +62,7 @@ pre div:hover {
 
 @media (max-width: 768px) {
     body {
-        overflow: auto; /* Enable scrolling on phones */
+        overflow: auto;
     }
     .code-snippet {
         width: 90%;
