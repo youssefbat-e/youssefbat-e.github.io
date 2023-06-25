@@ -1,0 +1,98 @@
+@import "color_var.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, var(--blue3), var(--text-color-secondary));
+    animation: backgroundAnimation 15s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 60%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.social-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 100px;
+    overflow-y: auto;
+    max-height: 500px; /* Adjust the max-height as needed */
+}
+
+.social-item {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.social-item:hover{
+    transform: scale(0.9);
+}
+
+.social-item:hover .social-item-content {
+    transform: scale(1.1);
+    opacity: 100;
+}
+
+.social-logo {
+    max-width: 80px;
+    max-height: 80px;
+    transition: opacity 0.3s ease;
+}
+
+.social-item:hover .social-logo {
+    opacity: 100;
+}
+
+.social-link {
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: transparent; /* Set link color to transparent */
+}
+
+.social-item:hover .social-link {
+    opacity: 1;
+    color: inherit; /* Change link color back to inherit */
+}

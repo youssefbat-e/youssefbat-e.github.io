@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/custom-cursor.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script>
-        // Use JavaScript to load and insert the header HTML into the body
         fetch('header.html')
             .then(response => response.text())
             .then(html => {
@@ -17,7 +18,40 @@
             });
     </script>
 </head>
+
 <body>
+<div class="background-animation"></div>
+
+<div class="social-grid">
+    <div class="social-item">
+        <div class="social-item-content">
+            <img src="images/LinkedIn-logo.png" alt="Linkedin" class="social-logo">
+            <a href="https://www.linkedin.com/in/youssef-bat-b998a81b5" class="social-link" target="_blank">Visit My LinkedIn</a>
+        </div>
+    </div>
+    <div class="social-item">
+        <div class="social-item-content">
+            <img src="images/gmail-logo.png" alt="Facebook" class="social-logo">
+            <a href="#" class="social-link" onclick="copyToClipboard('youssef.bat20@gmail.com'); updateText(this);">Copy My email</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function copyToClipboard(text) {
+        const tempInput = document.createElement('input');
+        tempInput.value = text;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+    }
+    function updateText(element) {
+        element.textContent = "Email copied";
+    }
+
+</script>
 
 </body>
+
 </html>
