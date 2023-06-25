@@ -59,7 +59,8 @@ class YoussefBat {
         var txt = $('pre').html().split("\n");
         var output = "";
         for (var x = 0; x < txt.length - 1; x++) {
-            var tabulation = "&nbsp;&nbsp;&nbsp;&nbsp;"; // You can adjust the number of spaces here
+            var i = x+1;
+            var tabulation = i + "&nbsp;&nbsp;&nbsp;&nbsp;"; // You can adjust the number of spaces here
             var indentedLine = tabulation + txt[x];
             output += "<div class='code-line'>" + indentedLine + "</div>";
         }

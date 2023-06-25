@@ -6,16 +6,9 @@
     --blue1: #03045e;
     --text-color-primary: #fff;
     --text-color-secondary: #20142C;
-}
-
-:root {
-    --blue1: #03045e;
-    --blue2: #023e8a;
+    --dark : #2f2b3a;
     --blue3: #0077b6;
-    --blue4: #0096c7;
     --blue5: #00b4d8;
-    --blue6: #48cae4;
     --blue7: #90e0ef;
-    --blue8: #ade8f4;
     --blue9: #caf0f8;
 }
