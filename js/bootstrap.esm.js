@@ -55,7 +55,7 @@ const Data = {
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap util/index.js
+ * Bootstrap util/skills.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  * --------------------------------------------------------------------------
  */

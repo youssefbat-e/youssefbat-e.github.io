@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Skills</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/custom-cursor.css">
+    <script src="js/portfolio.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/skills.js"></script>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('afterbegin', html);
+            });
+    </script>
 </head>
-<body>
 
+<body>
+<div class="background-animation"></div>
+
+<div class="skills-container">
+    <div class="skills-grid">
+    </div>
+</div>
 </body>
+
 </html>

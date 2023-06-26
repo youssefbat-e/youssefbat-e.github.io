@@ -33,14 +33,13 @@ body {
 .portfolio-timeline {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Updated */
+    justify-content: space-between; /* Updated */
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding-bottom: 10px;
-    margin-top: 100px;
-    height: 300px; /* Set the desired height of the timeline */
+    margin-top: 140px;
 }
 
 .portfolio-timeline::-webkit-scrollbar {
@@ -50,7 +49,7 @@ body {
 
 .timeline-node {
     flex: 0 0 auto;
-    width: 120px;
+    width: 200px;
     background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -58,7 +57,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 100px; /* Adjust the spacing between the nodes */
+    /* Adjust the spacing between the nodes */
+    margin: 50px 60px 0;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative; /* Added */
@@ -69,7 +69,7 @@ body {
 }
 
 .timeline-node:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .timeline-node.active {
@@ -78,8 +78,8 @@ body {
 }
 
 .timeline-node.active .node-number {
-    width: 72px; /* Adjust the expanded node number size */
-    height: 72px;
+    width: 84px; /* Adjust the expanded node number size */
+    height: 84px;
 }
 
 .timeline-node.active .node-title {
@@ -96,7 +96,7 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute; /* Updated */
-    bottom: -120px; /* Adjust the position as needed */
+    bottom: auto; /* Adjust the position as needed */
     left: 0;
     width: 95%;
 }
@@ -106,6 +106,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 200px;
 }
 
 .node-number {
@@ -114,16 +115,17 @@ body {
     color: var(--text-color-primary);
     background-color: var(--blue3);
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .node-title {
-    font-size: 14px;
+    font-size: 20px;
     color: var(--text-color-secondary);
     text-align: center;
 }
