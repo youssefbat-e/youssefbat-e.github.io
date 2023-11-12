@@ -68,9 +68,6 @@ body {
     margin-right: 100px;
 }
 
-.timeline-node:hover {
-    transform: scale(1.2);
-}
 
 .timeline-node.active {
     width: 360px; /* Adjust the expanded width as needed */

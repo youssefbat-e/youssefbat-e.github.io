@@ -4,8 +4,20 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden;
     position: relative;
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+    background-color: rgb(29, 56, 100);
 }
 
 .background-animation {
@@ -30,6 +42,8 @@ body {
         background-position: 0 50%;
     }
 }
+
+
 
 .code-snippet {
     width: 90%;

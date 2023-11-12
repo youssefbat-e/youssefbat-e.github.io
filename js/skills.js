@@ -1,11 +1,17 @@
 $(document).ready(function() {
     var skills = [
-        { name: "Java", progress: 80, remaining: 20 },
-        { name: "Python", progress: 88, remaining: 12 },
+        { name: "Java", progress: 95, remaining: 5 },
+        { name: "C", progress: 85, remaining: 15 },
+        { name: "Python", progress: 75, remaining: 25 },
+        { name: "Android Studio (Java)", progress: 90, remaining: 10 },
+        { name: "SQL", progress: 90, remaining: 10 },
+        { name: "PHP", progress: 70, remaining: 30 },
         { name: "HTML", progress: 95, remaining: 5 },
-        { name: "HTML", progress: 49, remaining: 51 },
-        { name: "CSS", progress: 65, remaining: 35 },
-        { name: "JS", progress: 70, remaining: 30 },
+        { name: "CSS", progress: 85, remaining: 15 },
+        { name: "JS", progress: 60, remaining: 40 },
+        { name: "Swift", progress: 70, remaining: 30 },
+        { name: "Assembly", progress: 70, remaining: 30 },
+
     ];
 
     var chartConfig = {
