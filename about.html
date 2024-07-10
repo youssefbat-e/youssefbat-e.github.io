@@ -30,12 +30,20 @@ class YoussefBat {
     constructor() {
         this.name = 'Youssef Bat';
         this.dayOfBirthTimestamp = 1035040069;
-        this.email = 'youssef.bat20@gmail.com';
+        this.email = 'youssefbat.contact@gmail.com';
     }
 
     workExperience() {
         return [
-            { 'academic projects' : 'check the portfolio section for some of my projects' }
+            {
+                'Data Engineer at Retabit': 'Designed and implemented a Python routine for data optimization, enhancing process speed and reducing memory usage. Developed two deep learning instance segmentation models with over 80% precision. Integrated open-source research projects into project development. Generated 2 million clean, precise, and ready-to-use data points.'
+            },
+            {
+                'Web Developer at Sons al Balco': 'Developed a dynamic, interactive website with data dashboards and Mapbox cluster points. Updated PHP files for server-side optimization and code reusability. Created a Python script for periodic API interaction, generating functional datasets integrated into the website.'
+            },
+            {
+                'Academic Projects': 'Check the portfolio section for some of my projects.'
+            }
         ];
     }
 
@@ -46,12 +54,26 @@ class YoussefBat {
     }
 
     skills() {
-        return [
-            'HTML/CSS/JS', 'Vue', 'Slim', 'Bootstrap', 'Vite', 'npm', 'Docker', 'GIT', 'Twig', 'PHP',
-            'MySQL/SqlLite/Neo4j', 'Photoshop', 'Illustrator', 'Figma', 'Swift', 'Android Studio (Java)',
-            'Java', 'Python', 'C', 'C++', 'Communication', 'Marketing management', 'Project Management',
-            'Database Management (SQL)'
-        ];
+        return {
+            'Web Development': [
+                'HTML', 'CSS', 'JavaScript', 'Vue', 'Bootstrap', 'Slim', 'Twig', 'PHP', 'MySQL', 'SQL'
+            ],
+            'Mobile Development': [
+                'Swift', 'Android Studio (Java)', 'React Native', 'Flutter'
+            ],
+            'Software Engineering': [
+                'Python', 'Java', 'C', 'C++', 'GIT', 'Docker', 'Agile Methodologies', 'Project Management'
+            ],
+            'Data Engineering': [
+                'Python', 'SQL', 'NoSQL Databases (MongoDB, Neo4j)', 'Data Analysis', 'Machine Learning', 'TensorFlow', 'Pandas', 'scikit-learn', 'Big Data Technologies (Spark, Hadoop)'
+            ],
+            'Design & Tools': [
+                'Photoshop', 'Illustrator', 'Figma', 'Vite', 'npm'
+            ],
+            'Soft Skills': [
+                'Communication', 'Marketing Management', 'Team Collaboration', 'Problem Solving'
+            ]
+        };
     }
 
     languages() {
@@ -59,7 +81,7 @@ class YoussefBat {
             'Arabic': 'Native',
             'English': 'Professional',
             'French': 'Bilingual',
-            'Spanish': 'Beginner to intermediate',
+            'Spanish': 'intermediate',
         };
     }
 }
